@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/hammadi1983/dashing/badge.svg?branch=master)](https://coveralls.io/github/hammadi1983/dashing?branch=master)
+[![Build Status](https://travis-ci.org/hammadi1983/dashing.svg?branch=master)](https://travis-ci.org/hammadi1983/dashing)
 # Dashing
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
