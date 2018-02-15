@@ -15,10 +15,16 @@ module.exports = function (config) {
     client:{
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    coverageIstanbulReporter: {
-      reports: [ 'html', 'lcovonly' ],
-      fixWebpackSourcePaths: true
-    },
+      coverageIstanbulReporter: {
+          reports: [ 'html', 'lcovonly' ],
+          fixWebpackSourcePaths: true,
+          thresholds: {
+              statements: 80,
+              lines: 80,
+              branches: 80,
+              functions: 80
+          }
+      },
     angularCli: {
       environment: 'dev'
     },
@@ -27,7 +33,13 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+          browsers: ['Chrome'],
+          customLaunchers: {
+              ChromeNoSandbox: {
+                  base: 'Chrome',
+                  flags: ['--no-sandbox']
+              }
+          },
     singleRun: false
   });
 };
